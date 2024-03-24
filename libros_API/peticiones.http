@@ -1,0 +1,51 @@
+###
+GET http://localhost:3000/libros
+
+###
+GET http://localhost:3000/libros/autor/2
+
+###
+POST http://localhost:3000/libros/crear-libro
+Content-Type: application/json
+
+{
+    "titulo": "Geronimo Stilton, El Gran Libro del Reino de la Fantasía",
+    "calificacion": "6",
+    "cant_vendidos": "91284319",
+    "num_paginas": "234",
+    "imagen": "https://www.polifemo.com/static/img/portadas/_visd_0000JPG02QJC.jpg",
+    "id_autor": "3"
+}
+
+###
+DELETE http://localhost:3000/libros/elimina-libro/4
+
+###
+GET http://localhost:3000/autores
+
+###
+POST http://localhost:3000/usuario-valido
+Content-Type: application/json
+
+{
+    "user_name": "admin",
+    "user_password": "admin12"
+}
+
+###
+POST http://localhost:3000/crear-usuario
+Content-Type: application/json
+
+{
+    "user_name": "admin",
+    "user_password": "admin"
+}
+
+### 
+GET http://localhost:3000/libros-alquilados/user/5
+
+###
+GET http://localhost:3000/libros-alquilados
+
+###
+GET http://localhost:3000/usario/9/imagen

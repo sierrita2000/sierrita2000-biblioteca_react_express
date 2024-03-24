@@ -1,0 +1,744 @@
+:root {
+  --marron: rgb(136, 105, 65);
+  --blanco: rgb(212, 210, 210);
+  --azul: rgb(82, 125, 165);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: var(--marron);
+}
+
+/* LOG IN Y SIGN UP */
+
+.login_signup {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.login_signup__info {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  position: relative;
+  text-align: center;
+}
+
+.login_signup__info__fondo {
+  position: absolute;
+  right: 0;
+  height: 150%;
+  width: 130%;
+  border-radius: 50%;
+  background-color: var(--azul);
+}
+
+.login_signup__info__logo,
+.login_signup__info h1,
+.login_signup__info p,
+.login_signup__info__redes {
+  z-index: 1;
+  margin: 1rem;
+}
+
+.login_signup__info__logo img {
+  height: 15rem;
+}
+
+.login_signup__info__redes i {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+/* FORMULARIOS LOG IN Y DE SIGN UP */
+
+.login_signup__cuadro {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_signup__cuadro__cuadro {
+  position: relative;
+  height: 80%;
+  width: 30rem;
+  border-radius: 25px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 1s ease-in-out;
+  overflow: hidden;
+}
+
+.girar_cuadro {
+  transform: perspective(1000px) rotateY(-180deg);
+}
+
+.login {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--blanco);
+  backface-visibility: hidden;
+  z-index: 1;
+}
+
+.login_signup__cuadro__cuadro__formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_signup__cuadro__cuadro__formulario label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login_signup__cuadro__cuadro__formulario input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  margin: 0 0 1rem;
+  padding: .5rem 0;
+  width: 15rem;
+}
+
+.login_signup__cuadro__cuadro__formulario button {
+  padding: .5rem 1rem;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.button__rotar_caja {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button__rotar_caja:hover {
+  text-decoration: underline;
+}
+
+.signup {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--blanco);
+  transform: rotateY(180deg);
+}
+
+.signup img {
+  height: 6rem;
+}
+
+.signup__delante {
+  z-index: 2;
+}
+
+.formulario_imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem 0 1rem;
+  padding: 0 1rem;
+}
+
+.formulario_imagen label i {
+  font-size: 22px;
+  margin: 0 0 0 1rem;
+  color: rgb(189, 160, 33);
+  cursor: pointer;
+}
+
+.formulario_imagen label:hover {
+  transform: scale(1.1);
+}
+
+.formulario_imagen input {
+  display: none;
+  border: none;
+}
+
+.formulario_imagen__imagen {
+  height: 6rem;
+  width: 6rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.5);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 0 0 1rem;
+}
+
+.formulario_imagen__imagen img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.formulario_imagen__imagen i {
+  font-size: 70px;
+}
+
+.formulario_imagen button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.formulario_imagen button i {
+  color: rgb(83, 83, 83);
+}
+
+.formulario_imagen button:hover {
+  transform: scale(1.1);
+}
+
+.formulario_imagen button:active {
+  transform: scale(1);
+}
+
+/* FIN LOG IN Y SIGN UP */
+
+/* INICIO BUSCADOR */
+
+.inicio {
+  display: flex;
+}
+
+.inicio__filtros {
+  height: 100vh;
+  width: 20rem;
+  background-color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  box-shadow: 8px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.inicio__buscador {
+  height: 100vh;
+  width: calc(100% - 20rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inicio__buscador__espera,
+.libros__vacio {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inicio__filtros__buscador {
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  font-size: 22px;
+  background-color: whitesmoke;
+}
+
+.inicio__filtros__buscador input {
+  width: inherit;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.inicio__filtros__buscador button {
+  margin: 0 0 0 .5rem;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 22px;
+}
+
+.boton_lupa {
+  text-decoration: none;
+  outline: none;
+}
+
+.inicio__filtros form {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.inicio__filtros form button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.formulario__links {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  z-index: 1;
+}
+
+.formulario__links:hover {
+  transform: scale(1.1);
+}
+
+.formulario__links:active {
+  transform: scale(1);
+}
+
+.formulario_buscador_todos {
+  margin: 1rem 0;
+}
+
+.formulario_buscador_todos .formulario__links {
+  font-weight: bold;
+}
+
+.buscador_autores {
+  margin: .5rem;
+}
+
+.buscador_autores__autor {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  font-weight: normal;
+  margin: .8rem 0;
+}
+
+.raya_separatoria {
+  height: 3px;
+  width: 100%;
+  background-color: var(--marron);
+}
+
+.formulario__crear_libro,
+.formulario__boton_alquilados,
+.formulario__libros_alquilados,
+.formulario__boton_usuarios {
+  margin: .5rem 0;
+}
+
+.formulario__navlink {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.inicio__filtros__login {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.inicio__filtros__login__foto {
+  height: 5rem;
+  width: 5rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 .5rem 0 0;
+}
+
+.inicio__filtros__login__foto img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.inicio__filtros input[type=radio] {
+  cursor: pointer;
+}
+
+.active {
+  color: var(--azul);
+}
+
+/* FIN INICIO BUSCADOR */
+
+/* LIBROS */
+
+.libros {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* FIN LIBROS */
+
+/* LIBRO */
+
+.libro {
+  height: fit-content;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.libro_alquilado_cartel {
+  position: absolute;
+  top: 10rem;
+  padding: 1rem 1.5rem;
+  border: 10px solid var(--blanco);
+  background-color: rgba(180, 79, 79, 0.7);
+  color: var(--blanco);
+  font-size: 35px;
+  transform: rotate(-40deg);
+}
+
+.libro__imagen {
+  height: 28rem;
+  position: relative;
+  margin: 0 0 2rem;
+}
+
+.libro__imagen img {
+  height: 100%;
+}
+
+.libro__imagen::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: -2rem;
+  height: 28rem;
+  width: 2rem;
+  background-color: rgb(163, 157, 157);
+  transform: skewY(45deg);
+  box-shadow: 8px 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.libro__imagen::after {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: 1rem;
+  height: 2rem;
+  width: 100%;
+  background-color: grey;
+  transform: skewX(45deg);
+  box-shadow: 10px 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.libro__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.libro__info h2 {
+  font-size: 40px;
+  margin: .5rem;
+  text-align: center;
+}
+
+.libro__info .autor {
+  font-size: 35px;
+}
+
+.libro__info .autor strong {
+  font-size: 25px;
+  margin: 0 .5rem;
+}
+
+.esperando_busqueda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0 0;
+}
+
+.esperando_busqueda img {
+  max-height: 25rem;
+}
+
+.esperando_busqueda h4 {
+  font-size: 40px;
+  margin: 1rem;
+}
+
+.libro__info .calificacion {
+  font-size: 30px;
+  margin: 0.3rem;
+  font-weight: bold;
+}
+
+.boton_basura {
+  margin: 1rem 0 0;
+  background-color: rgb(248, 89, 89);
+  outline: none;
+  border: 5px solid black;
+  border-radius: 50%;
+  font-size: 40px;
+  color: black;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.boton_editar {
+  margin: 1rem 0 0 1rem;
+  background-color: var(--azul);
+  outline: none;
+  border: 5px solid black;
+  border-radius: 50%;
+  font-size: 40px;
+  color: black;
+  padding: .5rem .8rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.boton_basura_bloqueado {
+  filter: grayscale(90%);
+  cursor: not-allowed;
+}
+
+.boton_basura:hover,
+.boton_editar:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(4px 8px 4px rgba(0, 0, 0, 0.7));
+}
+
+.boton_basura:active,
+.boton_editar:active {
+  transform: scale(1);
+  filter: none;
+}
+
+.boton_basura_bloqueado:hover {
+  filter: grayscale(90%);
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+.botones_usuarios {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0;
+}
+
+.boton_alquilar_devolver {
+  padding: .5rem 1rem;
+  font-size: 22px;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: var(--azul);
+  color: var(--blanco);
+  border: 2px solid var(--blanco);
+  border-radius: 30px;
+}
+
+.alquilado {
+  filter: grayscale(90%);
+  cursor: not-allowed;
+}
+
+.boton_favorito {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.boton_favorito i {
+  font-size: 30px;
+}
+
+.boton_alquilar_devolver:hover,
+.boton_favorito:hover {
+  transform: scale(1.1);
+}
+
+.boton_alquilar_devolver:active,
+.boton_favorito:active {
+  transform: scale(1);
+}
+
+.tiempo_devolucion {
+  margin: 1rem 0 0;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* FIN LIBRO */
+
+/* PAGINA DE CREACION DE LIBROS */
+
+.anadir_libros {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.anadir_libro__form {
+  height: fit-content;
+  width: 40rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  background: var(--blanco);
+  box-shadow:  20px 20px 60px rgba(0, 0, 0, 0.3),
+               -20px -20px 60px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+}
+
+.anadir_libro__form div {
+  margin: .5rem 0;
+}
+
+.anadir_libro__form input,
+.anadir_libro__form select {
+  padding: .2rem;
+  width: 100%;
+}
+
+.form__botones {
+  align-self: center;
+  margin: 1.5rem;
+}
+
+.form__botones button {
+  margin: 0 1.5rem;
+  font-size: 20px;
+  padding: .5rem 1rem;
+  background-color: var(--azul);
+  color: whitesmoke;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  transition: all .15s ease-in-out;
+}
+
+.form__botones button:hover {
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
+  transform: scale(1.1);
+}
+
+.form__botones button:active {
+  filter: none;
+  transform: scale(1);
+}
+
+.advertencia_campo_ob {
+  display: none;
+}
+
+.advertencia_campo_ob i {
+  color: red;
+}
+
+/* FIN PAGINA DE CREACION DE LIBROS */
+
+/* USUARIOS */
+
+.usuarios {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.usuario {
+  height: fit-content;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.usuario__imagen {
+  height: 20rem;
+  width: 20rem;
+  border: 4px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.usuario__imagen img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.usuario h2 {
+  font-size: 40px;
+}
+
+.usuario h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* FIN USUARIOS */
